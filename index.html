@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maha Fassenni — Danseuse professionnelle, coach et chorégraphe au Maroc. Coaching privé, ateliers, performances et clips." />
+  <title>Maha Fassenni | Danseuse & Coach</title>
+
+  <!-- SEO & Social -->
+  <meta property="og:title" content="Maha Fassenni | Danseuse & Coach" />
+  <meta property="og:description" content="Performances, coaching et chorégraphie d'exception." />
+  <meta property="og:image" content="images/maha-portrait-1.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-name">MAHA</span>
+      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="page-shell">
+
+    <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+    <header class="topbar" id="topbar">
+      <a href="#hero" class="brand">
+        <span class="brand-name">MAHA FASSENNI</span>
+      </a>
+
+      <nav class="nav-links" id="main-nav" role="navigation" aria-label="Navigation principale">
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#classes" class="nav-link">Cours</a>
+        <a href="#videos" class="nav-link">Vidéos</a>
+        <a href="#gallery" class="nav-link">Galerie</a>
+        <a href="#testimonials" class="nav-link">Avis</a>
+        <a href="#blog" class="nav-link">Blog</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="#contact" class="btn btn-outline">Réserver</a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+      <nav class="mobile-nav">
+        <a href="#about" class="mobile-nav-link" data-index="1">À propos</a>
+        <a href="#classes" class="mobile-nav-link" data-index="2">Cours</a>
+        <a href="#videos" class="mobile-nav-link" data-index="3">Vidéos</a>
+        <a href="#gallery" class="mobile-nav-link" data-index="4">Galerie</a>
+        <a href="#testimonials" class="mobile-nav-link" data-index="5">Avis</a>
+        <a href="#blog" class="mobile-nav-link" data-index="6">Blog</a>
+        <a href="#contact" class="mobile-nav-link mobile-cta" data-index="7">Réserver une séance →</a>
+      </nav>
+      <div class="mobile-nav-footer">
+        <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener">@maha.fassenni</a>
+      </div>
+    </div>
+
+    <main>
+
+      <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+      <section id="hero" class="hero-section">
+        <div class="hero-bg">
+          <video class="hero-video" autoplay muted playsinline loop preload="metadata" poster="images/about-photo-1.png">
+            <source src="images/hero-background.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-overlay"></div>
+          <div class="hero-grain"></div>
+        </div>
+
+        <!-- Diagonal slash accent -->
+        <div class="hero-slash" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            Artiste · Coach · Chorégraphe
+          </p>
+          <h1 class="hero-title">
+            <span class="title-line" data-text="MAHA">MAHA</span>
+            <span class="title-line title-italic" data-text="FASSENNI">FASSENNI</span>
+          </h1>
+          <p class="hero-sub">Danseuse de scène, présence dans les plus grands clips marocains, formatrice des talents de demain.</p>
+          <div class="hero-actions">
+            <a href="#classes" class="btn btn-gold">Voir le coaching</a>
+            <a href="#videos" class="btn btn-ghost">
+              <span class="btn-play-icon" aria-hidden="true">▶</span>
+              Voir les performances
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>12<span class="stat-plus">+</span></strong>
+            <span>Clips artistiques</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <strong>25<span class="stat-plus">+</span></strong>
+            <span>Événements nationaux</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <strong>10<span class="stat-plus">+</span></strong>
+            <span>Clubs partenaires</span>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span class="scroll-text">Scroll</span>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+      <section id="about" class="section about-section reveal-section">
+        <div class="about-content">
+          <div class="about-text">
+            <span class="section-tag">Portrait</span>
+            <h2 class="section-title">Une artiste<br /><em>du mouvement</em></h2>
+            <p class="about-lead">Maha Fassenni incarne la danse dans toute sa dimension — technique irréprochable, présence magnétique, sensibilité artistique rare.</p>
+            <p class="about-body">Formée aux disciplines les plus exigeantes, elle s'impose sur scène, en clip et en événement comme une référence incontournable de la scène artistique marocaine.</p>
+            <ul class="about-list">
+              <li>
+                <span class="list-icon" aria-hidden="true">◆</span>
+                Coaching privé et collectif personnalisé
+              </li>
+              <li>
+                <span class="list-icon" aria-hidden="true">◆</span>
+                Présence dans les clips des plus grands artistes marocains
+              </li>
+              <li>
+                <span class="list-icon" aria-hidden="true">◆</span>
+                Événements nationaux et collaborations internationales
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-gold">Travailler avec Maha</a>
+          </div>
+
+          <div class="about-visual">
+            <div class="about-photo-stack">
+              <div class="photo-main">
+                <img src="images/maha-portrait-1.png" alt="Portrait professionnel de Maha Fassenni" loading="lazy" />
+              </div>
+              <div class="photo-accent">
+                <img src="images/about-photo-1.png" alt="Maha en studio de danse" loading="lazy" />
+              </div>
+              <div class="photo-badge">
+                <span class="badge-number">8+</span>
+                <span class="badge-text">Ans d'expérience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ CLASSES ═══════════════════════════════ -->
+      <section id="classes" class="section classes-section reveal-section">
+        <div class="section-header centered">
+          <span class="section-tag">Formations premium</span>
+          <h2 class="section-title">Cours &amp; <em>Masterclasses</em></h2>
+          <p class="section-intro">Des sessions sur mesure pour danseurs, clubs et projets artistiques.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-number="01">
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <circle cx="16" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Coaching individuel</h3>
+              <p>Perfectionnement technique, présence scénique et développement d'un style personnel unique.</p>
+              <a href="#contact" class="service-link">Réserver <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card featured-card" data-number="02">
+            <div class="service-card-inner">
+              <span class="card-badge">Populaire</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <circle cx="10" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="22" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 26c0-4.418 3.582-8 8-8h12c4.418 0 8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Ateliers en club</h3>
+              <p>Sessions collectives dynamiques pour renforcer la cohésion d'équipe et libérer la créativité.</p>
+              <a href="#contact" class="service-link">Réserver <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="service-card" data-number="03">
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <polygon points="6,4 26,16 6,28" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Performance &amp; Show</h3>
+              <p>Chorégraphies sur mesure pour clips, événements privés, galas et spectacles scéniques.</p>
+              <a href="#contact" class="service-link">Réserver <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ VIDEOS ═══════════════════════════════ -->
+      <section id="videos" class="section videos-section reveal-section">
+        <div class="section-header centered">
+          <span class="section-tag">Reels &amp; Performances</span>
+          <h2 class="section-title">Visuels <em>dynamiques</em></h2>
+          <p class="section-intro">Clips et performances avec les plus grands artistes marocains.</p>
+        </div>
+
+        <div class="video-grid">
+          <div class="video-block" data-video-index="1">
+            <div class="video-wrapper">
+              <video class="video-frame" muted playsinline loop preload="metadata">
+                <source src="images/1video.mp4" type="video/mp4" />
+              </video>
+              <div class="video-overlay">
+                <button class="video-play-btn" aria-label="Lire la vidéo">
+                  <span class="play-icon" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="video-label">
+                <strong>Ambiance scène</strong>
+                <p>Performance intense et direction artistique.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-block" data-video-index="2">
+            <div class="video-wrapper">
+              <video class="video-frame" muted playsinline loop preload="metadata">
+                <source src="images/2video.mp4" type="video/mp4" />
+              </video>
+              <div class="video-overlay">
+                <button class="video-play-btn" aria-label="Lire la vidéo">
+                  <span class="play-icon" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="video-label">
+                <strong>Clip officiel</strong>
+                <p>Chorégraphie signature pour clip musical.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-block" data-video-index="3">
+            <div class="video-wrapper">
+              <video class="video-frame" muted playsinline loop preload="metadata">
+                <source src="images/3video.mp4" type="video/mp4" />
+              </video>
+              <div class="video-overlay">
+                <button class="video-play-btn" aria-label="Lire la vidéo">
+                  <span class="play-icon" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="video-label">
+                <strong>Événement live</strong>
+                <p>Show en direct, énergie et précision.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="instagram-cta">
+          <p>Retrouvez tous les contenus sur Instagram</p>
+          <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener" class="btn btn-gold">
+            @maha.fassenni
+          </a>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ GALLERY ═══════════════════════════════ -->
+      <section id="gallery" class="section gallery-section reveal-section">
+        <div class="section-header centered">
+          <span class="section-tag">Galerie</span>
+          <h2 class="section-title">En <em>images</em></h2>
+        </div>
+
+        <div class="gallery-masonry">
+          <div class="gallery-item gallery-tall">
+            <img src="images/maha-portrait-1.png" alt="Maha Fassenni portrait" loading="lazy" />
+            <div class="gallery-caption">Portrait studio</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/about-photo-1.png" alt="Maha en répétition" loading="lazy" />
+            <div class="gallery-caption">Répétition</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/about-photo-2.png" alt="Maha en performance" loading="lazy" />
+            <div class="gallery-caption">Performance live</div>
+          </div>
+          <div class="gallery-item gallery-wide">
+            <img src="images/gallery-2.png" alt="Coaching session" loading="lazy" />
+            <div class="gallery-caption">Session coaching</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+      <section id="testimonials" class="section testimonials-section reveal-section">
+        <div class="section-header centered">
+          <span class="section-tag">Témoignages</span>
+          <h2 class="section-title">Ce qu'ils <em>disent</em></h2>
+        </div>
+
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-text">Maha a transformé ma façon de bouger sur scène. Sa pédagogie est exigeante, bienveillante et profondément efficace.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <strong>Sara M.</strong>
+                <span>Danseuse professionnelle</span>
+              </div>
+            </div>
+            <div class="stars" aria-label="5 étoiles">★★★★★</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-text">Une collaboration artistique rare. Maha apporte une vision, une énergie et un niveau d'excellence qui élève chaque projet.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">K</div>
+              <div>
+                <strong>Karim B.</strong>
+                <span>Directeur artistique</span>
+              </div>
+            </div>
+            <div class="stars" aria-label="5 étoiles">★★★★★</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-text">L'atelier en club a tout changé pour nous. Cohésion, créativité, technique — Maha maîtrise chaque dimension de la danse.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">L</div>
+              <div>
+                <strong>Leila R.</strong>
+                <span>Responsable club de danse</span>
+              </div>
+            </div>
+            <div class="stars" aria-label="5 étoiles">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="testimonial-nav" aria-label="Navigation témoignages">
+          <button class="t-nav-btn" id="t-prev" aria-label="Précédent">←</button>
+          <div class="t-dots" id="t-dots">
+            <span class="t-dot active"></span>
+            <span class="t-dot"></span>
+            <span class="t-dot"></span>
+          </div>
+          <button class="t-nav-btn" id="t-next" aria-label="Suivant">→</button>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ BLOG ═══════════════════════════════ -->
+      <section id="blog" class="section blog-section reveal-section">
+        <div class="section-header centered">
+          <span class="section-tag">Univers</span>
+          <h2 class="section-title">Inspirations &amp; <em>Réflexions</em></h2>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card blog-featured">
+            <div class="blog-img-wrap">
+              <img src="images/gallery-4.png" alt="Article sur la présence scénique" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <span class="blog-category">Technique</span>
+              <h3>La présence scénique, ça s'apprend</h3>
+              <p>Comment développer un magnétisme naturel qui capte l'attention dès les premières secondes sur scène.</p>
+              <a href="#" class="blog-link">Lire l'article <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-img-wrap">
+              <img src="images/gallery-2.png" alt="Article sur la préparation mentale" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <span class="blog-category">Mental</span>
+              <h3>Se préparer mentalement avant un show</h3>
+              <p>Les rituels et techniques que j'utilise avant chaque performance.</p>
+              <a href="#" class="blog-link">Lire <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-img-wrap">
+              <img src="images/about-photo-1.png" alt="Article sur la chorégraphie" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <span class="blog-category">Création</span>
+              <h3>Chorégraphier pour un clip : mon process</h3>
+              <p>De la première écoute musicale à la dernière répétition avant le tournage.</p>
+              <a href="#" class="blog-link">Lire <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+      <section id="contact" class="section contact-section reveal-section">
+        <div class="contact-inner">
+          <div class="contact-text">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">Prêt·e à <em>commencer&nbsp;?</em></h2>
+            <p class="contact-sub">Pour coachings privés, collaborations artistiques ou performances sur mesure — chaque projet commence par une conversation.</p>
+
+            <div class="contact-channels">
+              <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener" class="contact-channel">
+                <span class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="channel-label">Instagram</span>
+                  <span class="channel-value">@maha.fassenni</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nom complet</label>
+                  <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Type de prestation</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Choisir une prestation</option>
+                  <option value="coaching-prive">Coaching individuel</option>
+                  <option value="atelier-club">Atelier en club</option>
+                  <option value="performance">Performance &amp; Show</option>
+                  <option value="autre">Autre projet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Décrivez votre projet ou vos objectifs..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold btn-full" id="submit-btn">
+                <span class="btn-text">Envoyer le message</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+              <p class="form-success" id="form-success" role="status" aria-live="polite">Message envoyé — je vous réponds sous 24h !</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-name">MAHA FASSENNI</span>
+          <p>Danseuse · Coach · Chorégraphe</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">À propos</a>
+          <a href="#classes">Cours</a>
+          <a href="#videos">Vidéos</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener" aria-label="Instagram de Maha Fassenni">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Maha Fassenni. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+  </div><!-- /page-shell -->
+
+  <script src="script.js"></script>
+</body>
+</html>
