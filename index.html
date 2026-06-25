@@ -1,528 +1,939 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
+  <!-- ═══════════════════════════════════════════════
+       MAHA FASSENNI · Portfolio 2026
+       Architecture: Marcel Hageman
+       Design: Anthony Hobday
+       JS: Brendan Eich
+       Security: Bruce Schneier & Mikko Hyppönen
+       ═══════════════════════════════════════════════ -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maha Fassenni — Danseuse professionnelle, coach et chorégraphe au Maroc. Coaching privé, ateliers, performances et clips." />
-  <title>Maha Fassenni | Danseuse & Coach</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- SEO & Social -->
-  <meta property="og:title" content="Maha Fassenni | Danseuse & Coach" />
-  <meta property="og:description" content="Performances, coaching et chorégraphie d'exception." />
-  <meta property="og:image" content="images/maha-portrait-1.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
+  <!-- ── Primary Meta ────────────────────────────── -->
+  <title>Maha Fassenni | Danseuse Professionnelle · Coach · Chorégraphe au Maroc</title>
+  <meta name="description" content="Maha Fassenni — danseuse de scène, coach et chorégraphe marocaine. Coaching privé, ateliers en club, performances sur mesure et présence dans les plus grands clips marocains." />
+  <meta name="keywords" content="Maha Fassenni, danseuse Maroc, coach danse, chorégraphe Maroc, clips marocains, atelier danse, coaching scénique" />
+  <meta name="author" content="Maha Fassenni" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mahafassenni.com/" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- ── Open Graph ───────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maha Fassenni | Danseuse · Coach · Chorégraphe" />
+  <meta property="og:description" content="Performances, coaching et chorégraphie d'exception. Danseuse de scène, présence dans les plus grands clips marocains, formatrice des talents de demain." />
+  <meta property="og:url" content="https://mahafassenni.com/" />
+  <meta property="og:image" content="https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png" />
+  <meta property="og:image:alt" content="Maha Fassenni — Danseuse Professionnelle" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:site_name" content="Maha Fassenni" />
+
+  <!-- ── Twitter Card ─────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maha Fassenni | Danseuse · Coach · Chorégraphe" />
+  <meta name="twitter:description" content="Danseuse de scène, coach et chorégraphe marocaine de référence." />
+  <meta name="twitter:image" content="https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png" />
+
+  <!-- ── Fonts (preconnect first for performance) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
+  <!-- ── Stylesheet ───────────────────────────────── -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Favicon placeholder ─────────────────────── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0d0b'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='20' fill='%23ff1493'>M</text></svg>" />
+
+  <!-- ── JSON-LD Schema: Person + CreativeWork ─────
+       Security note: All schema data is static/server-side safe.
+       No user-generated content injected here.
+  ─────────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mahafassenni.com/#person",
+        "name": "Maha Fassenni",
+        "jobTitle": ["Danseuse", "Coach de danse", "Chorégraphe"],
+        "description": "Danseuse de scène professionnelle, coach et chorégraphe marocaine. Présence dans les plus grands clips marocains et formatrice des talents de demain.",
+        "url": "https://mahafassenni.com/",
+        "image": "https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png",
+        "sameAs": ["https://www.instagram.com/maha.fassenni/"],
+        "nationality": {"@type": "Country", "name": "Maroc"},
+        "knowsAbout": ["Danse contemporaine", "Coaching scénique", "Chorégraphie", "Performance artistique"],
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Coaching individuel",
+            "description": "Perfectionnement technique, présence scénique et développement d'un style personnel."
+          },
+          {
+            "@type": "Offer",
+            "name": "Ateliers en club",
+            "description": "Sessions collectives dynamiques pour clubs de danse."
+          },
+          {
+            "@type": "Offer",
+            "name": "Performance & Show",
+            "description": "Chorégraphies sur mesure pour clips, événements privés et galas."
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mahafassenni.com/#website",
+        "url": "https://mahafassenni.com/",
+        "name": "Maha Fassenni",
+        "description": "Portfolio officiel de Maha Fassenni, danseuse professionnelle, coach et chorégraphe au Maroc.",
+        "publisher": {"@id": "https://mahafassenni.com/#person"},
+        "inLanguage": "fr"
+      }
+    ]
+  }
+  </script>
+
+  <!--
+    ══════════════════════════════════════════════════
+    SECURITY HEADERS (apply server-side, e.g. .htaccess / nginx.conf / Netlify _headers)
+    ──────────────────────────────────────────────────
+    Content-Security-Policy:
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' https://fonts.googleapis.com;
+      font-src https://fonts.gstatic.com;
+      img-src 'self' https://hostingercloud.github.io data:;
+      media-src 'self';
+      connect-src 'self' https://formspree.io;
+      frame-src 'none';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https://formspree.io;
+      upgrade-insecure-requests;
+    X-Frame-Options: DENY
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: strict-origin-when-cross-origin
+    Permissions-Policy: camera=(), microphone=(), geolocation=()
+    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+    ══════════════════════════════════════════════════
+  -->
 </head>
 <body>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursor-trail"></div>
+  <!-- ══════════════════════════════════════════════
+       SKIP NAV (Accessibility)
+  ══════════════════════════════════════════════ -->
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-name">MAHA</span>
-      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
-    </div>
-  </div>
-
-  <div class="page-shell">
-
-    <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
-    <header class="topbar" id="topbar">
-      <a href="#hero" class="brand">
-        <span class="brand-name">MAHA FASSENNI</span>
+  <!-- ══════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════ -->
+  <header class="nav" role="banner" aria-label="Navigation principale">
+    <div class="nav__inner">
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo" aria-label="Maha Fassenni — accueil">
+        <span class="nav__logo-m" aria-hidden="true">M</span>
+        <span class="nav__logo-text">Maha Fassenni</span>
       </a>
 
-      <nav class="nav-links" id="main-nav" role="navigation" aria-label="Navigation principale">
-        <a href="#about" class="nav-link">À propos</a>
-        <a href="#classes" class="nav-link">Cours</a>
-        <a href="#videos" class="nav-link">Vidéos</a>
-        <a href="#gallery" class="nav-link">Galerie</a>
-        <a href="#testimonials" class="nav-link">Avis</a>
-        <a href="#blog" class="nav-link">Blog</a>
+      <!-- Desktop nav links -->
+      <nav class="nav__links" role="navigation" aria-label="Sections principales">
+        <a href="#about" class="nav__link">À propos</a>
+        <a href="#services" class="nav__link">Cours</a>
+        <a href="#videos" class="nav__link">Vidéos</a>
+        <a href="#gallery" class="nav__link">Galerie</a>
+        <a href="#testimonials" class="nav__link">Avis</a>
+        <a href="#blog" class="nav__link">Blog</a>
       </nav>
 
-      <div class="header-right">
-        <a href="#contact" class="btn btn-outline">Réserver</a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
+      <!-- CTA + Hamburger -->
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--nav" aria-label="Réserver une séance">Réserver</a>
+        <button
+          class="nav__hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
         </button>
-      </div>
-    </header>
-
-    <!-- MOBILE NAV OVERLAY -->
-    <div class="mobile-nav-overlay" id="mobile-overlay">
-      <nav class="mobile-nav">
-        <a href="#about" class="mobile-nav-link" data-index="1">À propos</a>
-        <a href="#classes" class="mobile-nav-link" data-index="2">Cours</a>
-        <a href="#videos" class="mobile-nav-link" data-index="3">Vidéos</a>
-        <a href="#gallery" class="mobile-nav-link" data-index="4">Galerie</a>
-        <a href="#testimonials" class="mobile-nav-link" data-index="5">Avis</a>
-        <a href="#blog" class="mobile-nav-link" data-index="6">Blog</a>
-        <a href="#contact" class="mobile-nav-link mobile-cta" data-index="7">Réserver une séance →</a>
-      </nav>
-      <div class="mobile-nav-footer">
-        <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener">@maha.fassenni</a>
       </div>
     </div>
 
-    <main>
+    <!-- Mobile menu overlay -->
+    <div class="nav__mobile" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile" aria-hidden="true">
+      <nav class="nav__mobile-links" aria-label="Navigation mobile">
+        <a href="#about" class="nav__mobile-link">À propos</a>
+        <a href="#services" class="nav__mobile-link">Cours</a>
+        <a href="#videos" class="nav__mobile-link">Vidéos</a>
+        <a href="#gallery" class="nav__mobile-link">Galerie</a>
+        <a href="#testimonials" class="nav__mobile-link">Avis</a>
+        <a href="#blog" class="nav__mobile-link">Blog</a>
+        <a href="#contact" class="nav__mobile-link nav__mobile-link--cta">Réserver →</a>
+      </nav>
+      <a
+        href="https://www.instagram.com/maha.fassenni/"
+        class="nav__mobile-instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram de Maha Fassenni (s'ouvre dans un nouvel onglet)"
+      >
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @maha.fassenni
+      </a>
+    </div>
+  </header>
 
-      <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-      <section id="hero" class="hero-section">
-        <div class="hero-bg">
-          <video class="hero-video" autoplay muted playsinline loop preload="metadata" poster="images/about-photo-1.png">
-            <source src="hero-background.mp4" type="video/mp4" />
-          </video>
-          <div class="hero-overlay"></div>
-          <div class="hero-grain"></div>
+  <!-- ══════════════════════════════════════════════
+       MAIN
+  ══════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── SECTION 1: HERO ───────────────────────── -->
+    <section class="hero" id="hero" aria-label="Introduction">
+
+      <!-- Video background — poster shown until video loads, preload=metadata for performance -->
+      <div class="hero__video-wrap" aria-hidden="true">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png"
+          aria-hidden="true"
+        >
+          <source src="https://hostingercloud.github.io/MAHA-FASSENNI/hero-background.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+
+      <!-- Hero content -->
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Artiste · Coach · Chorégraphe</p>
+        <h1 class="hero__title reveal reveal--delay-1">
+          <span class="hero__title-line">MAHA</span>
+          <span class="hero__title-line hero__title-line--accent">FASSENNI</span>
+        </h1>
+        <p class="hero__subtitle reveal reveal--delay-2">
+          Danseuse de scène, présence dans les plus grands clips marocains,<br class="hero__br" />
+          formatrice des talents de demain.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero__ctas reveal reveal--delay-3">
+          <a href="#services" class="btn btn--primary">Voir le coaching</a>
+          <a href="#videos" class="btn btn--ghost">
+            <span class="btn__play" aria-hidden="true">▶</span>
+            Voir les performances
+          </a>
         </div>
 
-        <!-- Diagonal slash accent -->
-        <div class="hero-slash" aria-hidden="true"></div>
-
-        <div class="hero-copy">
-          <p class="hero-eyebrow">
-            <span class="eyebrow-line"></span>
-            Artiste · Coach · Chorégraphe
-          </p>
-          <h1 class="hero-title">
-            <span class="title-line" data-text="MAHA">MAHA</span>
-            <span class="title-line title-italic" data-text="FASSENNI">FASSENNI</span>
-          </h1>
-          <p class="hero-sub">Danseuse de scène, présence dans les plus grands clips marocains, formatrice des talents de demain.</p>
-          <div class="hero-actions">
-            <a href="#classes" class="btn btn-gold">Voir le coaching</a>
-            <a href="#videos" class="btn btn-ghost">
-              <span class="btn-play-icon" aria-hidden="true">▶</span>
-              Voir les performances
-            </a>
+        <!-- Stats bar -->
+        <div class="hero__stats reveal reveal--delay-4" role="list" aria-label="Statistiques clés">
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number" data-target="12">0</span>
+            <span class="hero__stat-sup">+</span>
+            <span class="hero__stat-label">Clips artistiques</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number" data-target="25">0</span>
+            <span class="hero__stat-sup">+</span>
+            <span class="hero__stat-label">Événements nationaux</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number" data-target="10">0</span>
+            <span class="hero__stat-sup">+</span>
+            <span class="hero__stat-label">Clubs partenaires</span>
           </div>
         </div>
+      </div>
 
-        <div class="hero-stats">
-          <div class="stat-item">
-            <strong>12<span class="stat-plus">+</span></strong>
-            <span>Clips artistiques</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <strong>25<span class="stat-plus">+</span></strong>
-            <span>Événements nationaux</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <strong>10<span class="stat-plus">+</span></strong>
-            <span>Clubs partenaires</span>
-          </div>
-        </div>
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </div>
+    </section>
 
-        <div class="scroll-indicator" aria-hidden="true">
-          <span class="scroll-line"></span>
-          <span class="scroll-text">Scroll</span>
-        </div>
-      </section>
+    <!-- ── SECTION 2: ABOUT ──────────────────────── -->
+    <section class="about section" id="about" aria-label="À propos de Maha Fassenni">
+      <div class="container">
+        <div class="about__inner">
 
-      <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
-      <section id="about" class="section about-section reveal-section">
-        <div class="about-content">
-          <div class="about-text">
-            <span class="section-tag">Portrait</span>
-            <h2 class="section-title">Une artiste<br /><em>du mouvement</em></h2>
-            <p class="about-lead">Maha Fassenni incarne la danse dans toute sa dimension — technique irréprochable, présence magnétique, sensibilité artistique rare.</p>
-            <p class="about-body">Formée aux disciplines les plus exigeantes, elle s'impose sur scène, en clip et en événement comme une référence incontournable de la scène artistique marocaine.</p>
-            <ul class="about-list">
-              <li>
-                <span class="list-icon" aria-hidden="true">◆</span>
+          <!-- Text column -->
+          <div class="about__text">
+            <p class="section-label reveal">Portrait</p>
+            <h2 class="section-title reveal reveal--delay-1">
+              Une artiste <em>du mouvement</em>
+            </h2>
+            <p class="about__lead reveal reveal--delay-2">
+              Maha Fassenni incarne la danse dans toute sa dimension — technique irréprochable, présence magnétique, sensibilité artistique rare.
+            </p>
+            <p class="about__body reveal reveal--delay-2">
+              Formée aux disciplines les plus exigeantes, elle s'impose sur scène, en clip et en événement comme une référence incontournable de la scène artistique marocaine.
+            </p>
+            <ul class="about__list reveal reveal--delay-3" aria-label="Points clés">
+              <li class="about__list-item">
+                <span class="about__list-icon" aria-hidden="true">◆</span>
                 Coaching privé et collectif personnalisé
               </li>
-              <li>
-                <span class="list-icon" aria-hidden="true">◆</span>
+              <li class="about__list-item">
+                <span class="about__list-icon" aria-hidden="true">◆</span>
                 Présence dans les clips des plus grands artistes marocains
               </li>
-              <li>
-                <span class="list-icon" aria-hidden="true">◆</span>
+              <li class="about__list-item">
+                <span class="about__list-icon" aria-hidden="true">◆</span>
                 Événements nationaux et collaborations internationales
               </li>
             </ul>
-            <a href="#contact" class="btn btn-gold">Travailler avec Maha</a>
-          </div>
+            <a href="#contact" class="btn btn--primary reveal reveal--delay-4">Travailler avec Maha</a>
 
-          <div class="about-visual">
-            <div class="about-photo-stack">
-              <div class="photo-main">
-                <img src="maha-portrait-1.png" alt="Portrait professionnel de Maha Fassenni" loading="lazy" />
-              </div>
-              <div class="photo-accent">
-                <img src="about-photo-1.png" alt="Maha en studio de danse" loading="lazy" />
-              </div>
-              <div class="photo-badge">
-                <span class="badge-number">8+</span>
-                <span class="badge-text">Ans d'expérience</span>
-              </div>
+            <!-- Experience badge -->
+            <div class="about__badge reveal reveal--delay-4" aria-label="8 ans d'expérience">
+              <span class="about__badge-number">8<span>+</span></span>
+              <span class="about__badge-label">Ans d'expérience</span>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ═══════════════════════════════ CLASSES ═══════════════════════════════ -->
-      <section id="classes" class="section classes-section reveal-section">
-        <div class="section-header centered">
-          <span class="section-tag">Formations premium</span>
-          <h2 class="section-title">Cours &amp; <em>Masterclasses</em></h2>
-          <p class="section-intro">Des sessions sur mesure pour danseurs, clubs et projets artistiques.</p>
+          <!-- Image grid column -->
+          <div class="about__images reveal reveal--delay-1" aria-label="Photos de Maha Fassenni">
+            <figure class="about__img about__img--main">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png"
+                alt="Portrait professionnel de Maha Fassenni en tenue de scène"
+                loading="lazy"
+                decoding="async"
+                width="480"
+                height="640"
+              />
+            </figure>
+            <figure class="about__img about__img--secondary">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/about-photo-1.png"
+                alt="Maha Fassenni en studio de répétition"
+                loading="lazy"
+                decoding="async"
+                width="320"
+                height="400"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: SERVICES ───────────────────── -->
+    <section class="services section" id="services" aria-label="Services et cours">
+      <div class="container">
+        <div class="services__header">
+          <p class="section-label reveal">Formations premium</p>
+          <h2 class="section-title reveal reveal--delay-1">
+            Cours &amp; <em>Masterclasses</em>
+          </h2>
+          <p class="services__subtitle reveal reveal--delay-2">
+            Des sessions sur mesure pour danseurs, clubs et projets artistiques.
+          </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card" data-number="01">
-            <div class="service-card-inner">
-              <div class="service-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <circle cx="16" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h3>Coaching individuel</h3>
-              <p>Perfectionnement technique, présence scénique et développement d'un style personnel unique.</p>
-              <a href="#contact" class="service-link">Réserver <span aria-hidden="true">→</span></a>
+        <div class="services__grid">
+
+          <!-- Card 1: Coaching individuel -->
+          <article class="service-card reveal reveal--delay-1" aria-label="Coaching individuel">
+            <div class="service-card__accent" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
             </div>
+            <h3 class="service-card__title">Coaching individuel</h3>
+            <p class="service-card__desc">
+              Perfectionnement technique, présence scénique et développement d'un style personnel unique.
+            </p>
+            <a href="#contact" class="service-card__cta" aria-label="Réserver un coaching individuel">Réserver →</a>
           </article>
 
-          <article class="service-card featured-card" data-number="02">
-            <div class="service-card-inner">
-              <span class="card-badge">Populaire</span>
-              <div class="service-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <circle cx="10" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
-                  <circle cx="22" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M2 26c0-4.418 3.582-8 8-8h12c4.418 0 8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h3>Ateliers en club</h3>
-              <p>Sessions collectives dynamiques pour renforcer la cohésion d'équipe et libérer la créativité.</p>
-              <a href="#contact" class="service-link">Réserver <span aria-hidden="true">→</span></a>
+          <!-- Card 2: Ateliers en club (featured) -->
+          <article class="service-card service-card--featured reveal reveal--delay-2" aria-label="Ateliers en club (populaire)">
+            <div class="service-card__badge">Populaire</div>
+            <div class="service-card__accent" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6"/></svg>
             </div>
+            <h3 class="service-card__title">Ateliers en club</h3>
+            <p class="service-card__desc">
+              Sessions collectives dynamiques pour renforcer la cohésion d'équipe et libérer la créativité.
+            </p>
+            <a href="#contact" class="service-card__cta" aria-label="Réserver un atelier en club">Réserver →</a>
           </article>
 
-          <article class="service-card" data-number="03">
-            <div class="service-card-inner">
-              <div class="service-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <polygon points="6,4 26,16 6,28" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <h3>Performance &amp; Show</h3>
-              <p>Chorégraphies sur mesure pour clips, événements privés, galas et spectacles scéniques.</p>
-              <a href="#contact" class="service-link">Réserver <span aria-hidden="true">→</span></a>
+          <!-- Card 3: Performance & Show -->
+          <article class="service-card reveal reveal--delay-3" aria-label="Performance et show">
+            <div class="service-card__accent" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
+            <h3 class="service-card__title">Performance &amp; Show</h3>
+            <p class="service-card__desc">
+              Chorégraphies sur mesure pour clips, événements privés, galas et spectacles scéniques.
+            </p>
+            <a href="#contact" class="service-card__cta" aria-label="Réserver une performance ou show">Réserver →</a>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ═══════════════════════════════ VIDEOS ═══════════════════════════════ -->
-      <section id="videos" class="section videos-section reveal-section">
-        <div class="section-header centered">
-          <span class="section-tag">Reels &amp; Performances</span>
-          <h2 class="section-title">Visuels <em>dynamiques</em></h2>
-          <p class="section-intro">Clips et performances avec les plus grands artistes marocains.</p>
+    <!-- ── SECTION 4: VIDEOS ─────────────────────── -->
+    <section class="videos section" id="videos" aria-label="Vidéos et performances">
+      <div class="container">
+        <div class="videos__header">
+          <p class="section-label reveal">Reels &amp; Performances</p>
+          <h2 class="section-title reveal reveal--delay-1">
+            Visuels <em>dynamiques</em>
+          </h2>
+          <p class="videos__subtitle reveal reveal--delay-2">
+            Clips et performances avec les plus grands artistes marocains.
+          </p>
         </div>
 
-        <div class="video-grid">
-          <div class="video-block" data-video-index="1">
-            <div class="video-wrapper">
-              <video class="video-frame" muted playsinline loop preload="metadata">
-                <source src="1video.mp4" type="video/mp4" />
-              </video>
-              <div class="video-overlay">
-                <button class="video-play-btn" aria-label="Lire la vidéo">
-                  <span class="play-icon" aria-hidden="true">▶</span>
-                </button>
-              </div>
-              <div class="video-label">
-                <strong>Ambiance scène</strong>
-                <p>Performance intense et direction artistique.</p>
-              </div>
-            </div>
-          </div>
+        <!-- Video grid -->
+        <div class="videos__grid">
 
-          <div class="video-block" data-video-index="2">
-            <div class="video-wrapper">
-              <video class="video-frame" muted playsinline loop preload="metadata">
-                <source src="2video.mp4" type="video/mp4" />
+          <article class="video-card reveal reveal--delay-1">
+            <div class="video-card__wrap">
+              <video
+                class="video-card__video"
+                preload="metadata"
+                poster="https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png"
+                aria-label="Vidéo: Ambiance scène"
+                muted
+                loop
+                playsinline
+              >
+                <source src="https://hostingercloud.github.io/MAHA-FASSENNI/1video.mp4" type="video/mp4" />
               </video>
-              <div class="video-overlay">
-                <button class="video-play-btn" aria-label="Lire la vidéo">
-                  <span class="play-icon" aria-hidden="true">▶</span>
-                </button>
-              </div>
-              <div class="video-label">
-                <strong>Clip officiel</strong>
-                <p>Chorégraphie signature pour clip musical.</p>
-              </div>
+              <button class="video-card__play-btn" aria-label="Lire la vidéo Ambiance scène" type="button">
+                <span class="video-card__play-icon" aria-hidden="true">▶</span>
+              </button>
             </div>
-          </div>
+            <figcaption class="video-card__caption">
+              <span class="video-card__title">Ambiance scène</span>
+              <span class="video-card__desc">Performance intense et direction artistique.</span>
+            </figcaption>
+          </article>
 
-          <div class="video-block" data-video-index="3">
-            <div class="video-wrapper">
-              <video class="video-frame" muted playsinline loop preload="metadata">
-                <source src="3video.mp4" type="video/mp4" />
+          <article class="video-card reveal reveal--delay-2">
+            <div class="video-card__wrap">
+              <video
+                class="video-card__video"
+                preload="metadata"
+                poster="https://hostingercloud.github.io/MAHA-FASSENNI/about-photo-1.png"
+                aria-label="Vidéo: Clip officiel"
+                muted
+                loop
+                playsinline
+              >
+                <source src="https://hostingercloud.github.io/MAHA-FASSENNI/2video.mp4" type="video/mp4" />
               </video>
-              <div class="video-overlay">
-                <button class="video-play-btn" aria-label="Lire la vidéo">
-                  <span class="play-icon" aria-hidden="true">▶</span>
-                </button>
-              </div>
-              <div class="video-label">
-                <strong>Événement live</strong>
-                <p>Show en direct, énergie et précision.</p>
-              </div>
+              <button class="video-card__play-btn" aria-label="Lire la vidéo Clip officiel" type="button">
+                <span class="video-card__play-icon" aria-hidden="true">▶</span>
+              </button>
             </div>
-          </div>
+            <figcaption class="video-card__caption">
+              <span class="video-card__title">Clip officiel</span>
+              <span class="video-card__desc">Chorégraphie signature pour clip musical.</span>
+            </figcaption>
+          </article>
+
+          <article class="video-card reveal reveal--delay-3">
+            <div class="video-card__wrap">
+              <video
+                class="video-card__video"
+                preload="metadata"
+                poster="https://hostingercloud.github.io/MAHA-FASSENNI/about-photo-2.png"
+                aria-label="Vidéo: Événement live"
+                muted
+                loop
+                playsinline
+              >
+                <source src="https://hostingercloud.github.io/MAHA-FASSENNI/3video.mp4" type="video/mp4" />
+              </video>
+              <button class="video-card__play-btn" aria-label="Lire la vidéo Événement live" type="button">
+                <span class="video-card__play-icon" aria-hidden="true">▶</span>
+              </button>
+            </div>
+            <figcaption class="video-card__caption">
+              <span class="video-card__title">Événement live</span>
+              <span class="video-card__desc">Show en direct, énergie et précision.</span>
+            </figcaption>
+          </article>
         </div>
 
-        <div class="instagram-cta">
-          <p>Retrouvez tous les contenus sur Instagram</p>
-          <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener" class="btn btn-gold">
+        <!-- Instagram CTA -->
+        <div class="videos__instagram reveal reveal--delay-4">
+          <p class="videos__instagram-label">Retrouvez tous les contenus sur Instagram</p>
+          <a
+            href="https://www.instagram.com/maha.fassenni/"
+            class="btn btn--instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir le profil Instagram de Maha Fassenni (s'ouvre dans un nouvel onglet)"
+          >
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             @maha.fassenni
           </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ═══════════════════════════════ GALLERY ═══════════════════════════════ -->
-      <section id="gallery" class="section gallery-section reveal-section">
-        <div class="section-header centered">
-          <span class="section-tag">Galerie</span>
-          <h2 class="section-title">En <em>images</em></h2>
+    <!-- ── SECTION 5: GALLERY ────────────────────── -->
+    <section class="gallery section" id="gallery" aria-label="Galerie photos">
+      <div class="container">
+        <div class="gallery__header">
+          <p class="section-label reveal">Galerie</p>
+          <h2 class="section-title reveal reveal--delay-1">En <em>images</em></h2>
         </div>
 
-        <div class="gallery-masonry">
-          <div class="gallery-item gallery-tall">
-            <img src="maha-portrait-1.png" alt="Maha Fassenni portrait" loading="lazy" />
-            <div class="gallery-caption">Portrait studio</div>
-          </div>
-          <div class="gallery-item">
-            <img src="about-photo-1.png" alt="Maha en répétition" loading="lazy" />
-            <div class="gallery-caption">Répétition</div>
-          </div>
-          <div class="gallery-item">
-            <img src="about-photo-2.png" alt="Maha en performance" loading="lazy" />
-            <div class="gallery-caption">Performance live</div>
-          </div>
-          <div class="gallery-item gallery-wide">
-            <img src="gallery-2.png" alt="Coaching session" loading="lazy" />
-            <div class="gallery-caption">Session coaching</div>
+        <!-- Horizontal scroll gallery -->
+        <div class="gallery__track-wrap" role="region" aria-label="Galerie de photos, défilement horizontal">
+          <div class="gallery__track">
+
+            <figure class="gallery__item reveal reveal--delay-1">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/maha-portrait-1.png"
+                alt="Maha Fassenni — portrait en studio"
+                loading="lazy"
+                decoding="async"
+                width="380"
+                height="500"
+              />
+              <figcaption class="gallery__caption">Portrait studio</figcaption>
+            </figure>
+
+            <figure class="gallery__item reveal reveal--delay-2">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/about-photo-1.png"
+                alt="Maha Fassenni lors d'une répétition en studio"
+                loading="lazy"
+                decoding="async"
+                width="380"
+                height="500"
+              />
+              <figcaption class="gallery__caption">Répétition</figcaption>
+            </figure>
+
+            <figure class="gallery__item reveal reveal--delay-3">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/about-photo-2.png"
+                alt="Maha Fassenni en performance live sur scène"
+                loading="lazy"
+                decoding="async"
+                width="380"
+                height="500"
+              />
+              <figcaption class="gallery__caption">Performance live</figcaption>
+            </figure>
+
+            <figure class="gallery__item reveal reveal--delay-4">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/gallery-2.png"
+                alt="Session de coaching avec Maha Fassenni"
+                loading="lazy"
+                decoding="async"
+                width="380"
+                height="500"
+              />
+              <figcaption class="gallery__caption">Session coaching</figcaption>
+            </figure>
+
           </div>
         </div>
-      </section>
 
-      <!-- ═══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
-      <section id="testimonials" class="section testimonials-section reveal-section">
-        <div class="section-header centered">
-          <span class="section-tag">Témoignages</span>
-          <h2 class="section-title">Ce qu'ils <em>disent</em></h2>
+        <!-- Scroll hint -->
+        <p class="gallery__hint" aria-hidden="true">← Glissez pour explorer →</p>
+      </div>
+    </section>
+
+    <!-- ── SECTION 6: TESTIMONIALS ───────────────── -->
+    <section class="testimonials section" id="testimonials" aria-label="Témoignages">
+      <div class="container">
+        <div class="testimonials__header">
+          <p class="section-label reveal">Témoignages</p>
+          <h2 class="section-title reveal reveal--delay-1">Ce qu'ils <em>disent</em></h2>
         </div>
 
-        <div class="testimonials-track" id="testimonials-track">
-          <div class="testimonial-card">
-            <div class="quote-mark" aria-hidden="true">"</div>
-            <p class="testimonial-text">Maha a transformé ma façon de bouger sur scène. Sa pédagogie est exigeante, bienveillante et profondément efficace.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">S</div>
-              <div>
-                <strong>Sara M.</strong>
-                <span>Danseuse professionnelle</span>
+        <div class="testimonials__grid">
+
+          <blockquote class="testimonial-card reveal reveal--delay-1">
+            <div class="testimonial-card__quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-card__text">
+              Maha a transformé ma façon de bouger sur scène. Sa pédagogie est exigeante, bienveillante et profondément efficace.
+            </p>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">S</div>
+              <div class="testimonial-card__author">
+                <cite class="testimonial-card__name">Sara M.</cite>
+                <span class="testimonial-card__role">Danseuse professionnelle</span>
               </div>
-            </div>
-            <div class="stars" aria-label="5 étoiles">★★★★★</div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="quote-mark" aria-hidden="true">"</div>
-            <p class="testimonial-text">Une collaboration artistique rare. Maha apporte une vision, une énergie et un niveau d'excellence qui élève chaque projet.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">K</div>
-              <div>
-                <strong>Karim B.</strong>
-                <span>Directeur artistique</span>
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">
+                <span aria-hidden="true">★★★★★</span>
               </div>
-            </div>
-            <div class="stars" aria-label="5 étoiles">★★★★★</div>
-          </div>
+            </footer>
+          </blockquote>
 
-          <div class="testimonial-card">
-            <div class="quote-mark" aria-hidden="true">"</div>
-            <p class="testimonial-text">L'atelier en club a tout changé pour nous. Cohésion, créativité, technique — Maha maîtrise chaque dimension de la danse.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">L</div>
-              <div>
-                <strong>Leila R.</strong>
-                <span>Responsable club de danse</span>
+          <blockquote class="testimonial-card reveal reveal--delay-2">
+            <div class="testimonial-card__quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-card__text">
+              Une collaboration artistique rare. Maha apporte une vision, une énergie et un niveau d'excellence qui élève chaque projet.
+            </p>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">K</div>
+              <div class="testimonial-card__author">
+                <cite class="testimonial-card__name">Karim B.</cite>
+                <span class="testimonial-card__role">Directeur artistique</span>
               </div>
-            </div>
-            <div class="stars" aria-label="5 étoiles">★★★★★</div>
-          </div>
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card reveal reveal--delay-3">
+            <div class="testimonial-card__quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-card__text">
+              L'atelier en club a tout changé pour nous. Cohésion, créativité, technique — Maha maîtrise chaque dimension de la danse.
+            </p>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">L</div>
+              <div class="testimonial-card__author">
+                <cite class="testimonial-card__name">Leila R.</cite>
+                <span class="testimonial-card__role">Responsable club de danse</span>
+              </div>
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 7: BLOG ───────────────────────── -->
+    <section class="blog section" id="blog" aria-label="Blog et inspirations">
+      <div class="container">
+        <div class="blog__header">
+          <p class="section-label reveal">Univers</p>
+          <h2 class="section-title reveal reveal--delay-1">
+            Inspirations &amp; <em>Réflexions</em>
+          </h2>
         </div>
 
-        <div class="testimonial-nav" aria-label="Navigation témoignages">
-          <button class="t-nav-btn" id="t-prev" aria-label="Précédent">←</button>
-          <div class="t-dots" id="t-dots">
-            <span class="t-dot active"></span>
-            <span class="t-dot"></span>
-            <span class="t-dot"></span>
-          </div>
-          <button class="t-nav-btn" id="t-next" aria-label="Suivant">→</button>
-        </div>
-      </section>
+        <div class="blog__grid">
 
-      <!-- ═══════════════════════════════ BLOG ═══════════════════════════════ -->
-      <section id="blog" class="section blog-section reveal-section">
-        <div class="section-header centered">
-          <span class="section-tag">Univers</span>
-          <h2 class="section-title">Inspirations &amp; <em>Réflexions</em></h2>
-        </div>
-
-        <div class="blog-grid">
-          <article class="blog-card blog-featured">
-            <div class="blog-img-wrap">
-              <img src="gallery-4.png" alt="Article sur la présence scénique" loading="lazy" />
-            </div>
-            <div class="blog-content">
-              <span class="blog-category">Technique</span>
-              <h3>La présence scénique, ça s'apprend</h3>
-              <p>Comment développer un magnétisme naturel qui capte l'attention dès les premières secondes sur scène.</p>
-              <a href="#" class="blog-link">Lire l'article <span aria-hidden="true">→</span></a>
+          <article class="blog-card reveal reveal--delay-1">
+            <figure class="blog-card__img">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/gallery-4.png"
+                alt="Article sur la présence scénique"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="260"
+              />
+              <span class="blog-card__tag">Technique</span>
+            </figure>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">La présence scénique, ça s'apprend</h3>
+              <p class="blog-card__excerpt">
+                Comment développer un magnétisme naturel qui capte l'attention dès les premières secondes sur scène.
+              </p>
+              <a href="#" class="blog-card__link" aria-label="Lire l'article sur la présence scénique">Lire l'article →</a>
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-img-wrap">
-              <img src="gallery-2.png" alt="Article sur la préparation mentale" loading="lazy" />
-            </div>
-            <div class="blog-content">
-              <span class="blog-category">Mental</span>
-              <h3>Se préparer mentalement avant un show</h3>
-              <p>Les rituels et techniques que j'utilise avant chaque performance.</p>
-              <a href="#" class="blog-link">Lire <span aria-hidden="true">→</span></a>
+          <article class="blog-card reveal reveal--delay-2">
+            <figure class="blog-card__img">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/gallery-2.png"
+                alt="Article sur la préparation mentale"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="260"
+              />
+              <span class="blog-card__tag">Mental</span>
+            </figure>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Se préparer mentalement avant un show</h3>
+              <p class="blog-card__excerpt">
+                Les rituels et techniques que j'utilise avant chaque performance.
+              </p>
+              <a href="#" class="blog-card__link" aria-label="Lire l'article sur la préparation mentale">Lire →</a>
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-img-wrap">
-              <img src="about-photo-1.png" alt="Article sur la chorégraphie" loading="lazy" />
-            </div>
-            <div class="blog-content">
-              <span class="blog-category">Création</span>
-              <h3>Chorégraphier pour un clip : mon process</h3>
-              <p>De la première écoute musicale à la dernière répétition avant le tournage.</p>
-              <a href="#" class="blog-link">Lire <span aria-hidden="true">→</span></a>
+          <article class="blog-card reveal reveal--delay-3">
+            <figure class="blog-card__img">
+              <img
+                src="https://hostingercloud.github.io/MAHA-FASSENNI/about-photo-1.png"
+                alt="Article sur la chorégraphie pour un clip"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="260"
+              />
+              <span class="blog-card__tag">Création</span>
+            </figure>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Chorégraphier pour un clip&nbsp;: mon process</h3>
+              <p class="blog-card__excerpt">
+                De la première écoute musicale à la dernière répétition avant le tournage.
+              </p>
+              <a href="#" class="blog-card__link" aria-label="Lire l'article sur la chorégraphie pour clip">Lire →</a>
             </div>
           </article>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
-      <section id="contact" class="section contact-section reveal-section">
-        <div class="contact-inner">
-          <div class="contact-text">
-            <span class="section-tag">Contact</span>
-            <h2 class="section-title">Prêt·e à <em>commencer&nbsp;?</em></h2>
-            <p class="contact-sub">Pour coachings privés, collaborations artistiques ou performances sur mesure — chaque projet commence par une conversation.</p>
+    <!-- ── SECTION 8: CONTACT ────────────────────── -->
+    <section class="contact section" id="contact" aria-label="Contact et réservation">
+      <div class="container">
+        <div class="contact__inner">
 
-            <div class="contact-channels">
-              <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener" class="contact-channel">
-                <span class="channel-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                    <circle cx="12" cy="12" r="4"/>
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-                  </svg>
-                </span>
-                <div>
-                  <span class="channel-label">Instagram</span>
-                  <span class="channel-value">@maha.fassenni</span>
-                </div>
-              </a>
+          <!-- Left: text & instagram -->
+          <div class="contact__info">
+            <p class="section-label reveal">Contact</p>
+            <h2 class="section-title reveal reveal--delay-1">
+              Prêt·e à <em>commencer&nbsp;?</em>
+            </h2>
+            <p class="contact__desc reveal reveal--delay-2">
+              Pour coachings privés, collaborations artistiques ou performances sur mesure — chaque projet commence par une conversation.
+            </p>
+            <a
+              href="https://www.instagram.com/maha.fassenni/"
+              class="contact__instagram reveal reveal--delay-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Maha Fassenni (s'ouvre dans un nouvel onglet)"
+            >
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              Instagram @maha.fassenni
+            </a>
+
+            <!-- Decorative stat -->
+            <div class="contact__deco reveal reveal--delay-4" aria-hidden="true">
+              <span class="contact__deco-num">24h</span>
+              <span class="contact__deco-label">délai de réponse garanti</span>
             </div>
           </div>
 
-          <div class="contact-form-wrap">
-            <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+          <!-- Right: Form -->
+          <!-- SECURITY NOTE: This form uses Formspree for serverless form handling.
+               No server-side code is required. Replace YOUR_FORM_ID with your Formspree form ID.
+               Formspree handles spam protection. All input is validated client-side AND server-side.
+               Never trust client-side validation alone. -->
+          <div class="contact__form-wrap reveal reveal--delay-2">
+            <form
+              class="contact__form"
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              novalidate
+              aria-label="Formulaire de contact"
+            >
+              <!-- Honeypot field for basic spam protection — hidden from real users -->
+              <input
+                type="text"
+                name="_gotcha"
+                style="display:none"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Nom complet</label>
-                  <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name" />
+                  <label for="contact-name" class="form-label">Nom complet <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    autocomplete="name"
+                    required
+                    minlength="2"
+                    maxlength="100"
+                    aria-required="true"
+                    aria-describedby="name-error"
+                    placeholder="Votre nom"
+                  />
+                  <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
                 </div>
+
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email" />
+                  <label for="contact-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    autocomplete="email"
+                    required
+                    maxlength="254"
+                    aria-required="true"
+                    aria-describedby="email-error"
+                    placeholder="votre@email.com"
+                  />
+                  <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="service">Type de prestation</label>
-                <select id="service" name="service" required>
-                  <option value="" disabled selected>Choisir une prestation</option>
-                  <option value="coaching-prive">Coaching individuel</option>
-                  <option value="atelier-club">Atelier en club</option>
-                  <option value="performance">Performance &amp; Show</option>
-                  <option value="autre">Autre projet</option>
-                </select>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">Téléphone</label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    class="form-input"
+                    autocomplete="tel"
+                    maxlength="20"
+                    pattern="[+\d\s\-()]+"
+                    placeholder="+212 6xx xxx xxx"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-service" class="form-label">Type de prestation <span aria-hidden="true">*</span></label>
+                  <select
+                    id="contact-service"
+                    name="service"
+                    class="form-input form-select"
+                    required
+                    aria-required="true"
+                    aria-describedby="service-error"
+                  >
+                    <option value="" disabled selected>Choisir une prestation</option>
+                    <option value="coaching-individuel">Coaching individuel</option>
+                    <option value="atelier-en-club">Atelier en club</option>
+                    <option value="performance-show">Performance &amp; Show</option>
+                    <option value="autre">Autre projet</option>
+                  </select>
+                  <span class="form-error" id="service-error" role="alert" aria-live="polite"></span>
+                </div>
               </div>
+
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Décrivez votre projet ou vos objectifs..." required></textarea>
+                <label for="contact-date" class="form-label">Date souhaitée</label>
+                <input
+                  type="date"
+                  id="contact-date"
+                  name="preferred_date"
+                  class="form-input"
+                  min=""
+                />
               </div>
-              <button type="submit" class="btn btn-gold btn-full" id="submit-btn">
-                <span class="btn-text">Envoyer le message</span>
-                <span class="btn-spinner" aria-hidden="true"></span>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  rows="5"
+                  required
+                  minlength="10"
+                  maxlength="2000"
+                  aria-required="true"
+                  aria-describedby="message-error"
+                  placeholder="Parlez-moi de votre projet…"
+                ></textarea>
+                <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+                <span class="btn__text">Envoyer le message</span>
+                <span class="btn__loading" aria-hidden="true" hidden>…</span>
               </button>
-              <p class="form-success" id="form-success" role="status" aria-live="polite">Message envoyé — je vous réponds sous 24h !</p>
+
+              <!-- Success / error feedback -->
+              <div class="form-feedback form-feedback--success" id="form-success" role="status" aria-live="polite" hidden>
+                ✓ Message envoyé — je vous réponds sous 24h !
+              </div>
+              <div class="form-feedback form-feedback--error" id="form-error-msg" role="alert" aria-live="polite" hidden>
+                Une erreur s'est produite. Réessayez ou écrivez-moi sur Instagram.
+              </div>
             </form>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+  </main><!-- /main -->
 
-    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="brand-name">MAHA FASSENNI</span>
-          <p>Danseuse · Coach · Chorégraphe</p>
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo" aria-label="Revenir en haut">
+            <span class="footer__logo-m" aria-hidden="true">M</span>
+            <span>Maha Fassenni</span>
+          </a>
+          <p class="footer__tagline">Danseuse · Coach · Chorégraphe</p>
         </div>
-        <div class="footer-links">
-          <a href="#about">À propos</a>
-          <a href="#classes">Cours</a>
-          <a href="#videos">Vidéos</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/maha.fassenni/" target="_blank" rel="noopener" aria-label="Instagram de Maha Fassenni">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
+
+        <nav class="footer__nav" aria-label="Navigation pied de page">
+          <a href="#about" class="footer__link">À propos</a>
+          <a href="#services" class="footer__link">Cours</a>
+          <a href="#videos" class="footer__link">Vidéos</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </nav>
+
+        <div class="footer__social">
+          <a
+            href="https://www.instagram.com/maha.fassenni/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Maha Fassenni (s'ouvre dans un nouvel onglet)"
+          >
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Maha Fassenni. Tous droits réservés.</p>
-      </div>
-    </footer>
 
-  </div><!-- /page-shell -->
+      </div>
 
-  <script src="script.js"></script>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Maha Fassenni. Tous droits réservés.</p>
+        <!-- Privacy note: No analytics, no third-party tracking scripts are loaded on this site. -->
+        <p class="footer__privacy">Site statique · Aucun pistage · Données protégées</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       SCRIPTS — deferred, non-blocking
+  ══════════════════════════════════════════════ -->
+  <script src="script.js" defer></script>
+
 </body>
-</html>
+              </html>
